@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="MenuFiles">
+        <item>Menu Dishes</item>
+        <item>Categories</item>
+        <item>Kitchen Codes</item>
+        <item>Settings</item>
+        <item>Dish Options</item>
+        <item>Dish Extras</item>
+    </string-array>
+</resources>

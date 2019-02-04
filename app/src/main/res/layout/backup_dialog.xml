@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+  	 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/llBackup" 
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:orientation="vertical"
+	android:gravity="center_horizontal"
+	android:background="@drawable/border_grey_tight"
+	android:layout_marginLeft="10dp"
+	android:layout_marginRight="10dp"
+	android:layout_marginTop="10dp"
+	android:layout_marginBottom="10dp"
+	android:padding="10dp">
+
+	<LinearLayout 
+		android:layout_height="wrap_content"
+  		android:layout_width="wrap_content"
+  		android:layout_marginTop="10dip"
+  		android:layout_marginBottom="10dip"
+  		android:orientation="vertical">
+  		 	
+		<TextView 
+		    android:id="@+id/bkupHeader"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="14dip"
+		    android:layout_marginRight="14dip"
+		    android:textSize="17dip"
+			android:typeface="sans"
+			android:textStyle="bold"
+			android:text="SmartMenu Menu Editor"	    
+			>
+		</TextView>
+		
+		<TextView 
+		    android:id="@+id/bkupText"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="14dip"
+		    android:layout_marginRight="14dip"
+		    android:layout_marginTop="20dp"
+		   	android:minWidth="300dip"
+		    android:textSize="14dip"
+			android:typeface="sans"
+			android:textStyle="normal"
+			android:text="You can backup your menufiles at anytime. It is recommended that you perform a backup after you have a good set of files. You can restore files from a backup by checking the RESTORE box when you startup. The Backup and Restore functions can help recover SmartMenu if you ever face problems."	    
+			>
+		</TextView>
+
+		<Button 
+			android:id="@+id/doBackup" 
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"		
+			android:text="Backup"
+			android:textStyle="normal"
+			android:paddingLeft="10.0dip"
+			android:paddingRight="10.0dip"
+			android:layout_marginTop="30dp"
+			android:textSize="14sp"
+			android:singleLine="true"
+			android:enabled="true"
+			android:layout_gravity="center_horizontal"
+			></Button>
+
+	</LinearLayout>
+
+</LinearLayout>
