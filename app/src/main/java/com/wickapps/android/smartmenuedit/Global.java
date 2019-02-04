@@ -18,7 +18,6 @@ package com.wickapps.android.smartmenuedit;
  */
 
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 
 public class Global {
@@ -37,8 +36,6 @@ public class Global {
 	public static Boolean   CheckAvailability =     false;
 
 	public static String	AdminPin = 		    	"";
-
-	public static String	AppName =				"SmartMenu_Edit";
 	
 	public static JSONArray Settings =				null;
 
