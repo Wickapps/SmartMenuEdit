@@ -1,86 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  
-    xmlns:android="http://schemas.android.com/apk/res/android"  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/listFiles"
-    android:layout_width="wrap_content"  
-    android:layout_height="wrap_content"  
-    android:orientation="vertical"  
-    android:padding="1dip">  
-    
-<TextView
-	android:id="@+id/lineTop"
-	android:background="@drawable/popupyellow"		
-	android:layout_width="fill_parent"
-	android:layout_height="25dp"
-	android:visibility="gone"
-	android:text=""
-	android:textStyle="bold"
-	android:gravity="center"
-	android:textColor="@color/white"/>	
-	
-<LinearLayout  
-    android:layout_width="fill_parent"  
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/lineLL"
-    android:orientation="horizontal"  
-    android:padding="2dip">
-    
+    android:orientation="vertical"
+    android:padding="1dip">
+
     <TextView
-		android:id="@+id/markFavorite"	
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="visible"
-		android:textStyle="bold"
-		android:gravity="center"/>
-    
-    <TextView
-		android:id="@+id/markNewDish"	
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="visible"
-		android:textStyle="bold"
-		android:gravity="center"/>
-    
-    <TextView
-		android:id="@+id/markHealthy"	
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="visible"
-		android:textStyle="bold"
-		android:gravity="center"/>
-    
-    <TextView
-		android:id="@+id/markDrink"	
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="visible"
-		android:textStyle="bold"
-		android:gravity="center"/>
-    
-    <TextView
-		android:id="@+id/markCounter"	
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="visible"
-		android:textStyle="bold"
-		android:gravity="center"/>
-    
-	<TextView   
-	    android:id="@+id/files_item_title"  
-	    android:layout_width="wrap_content"  
-	    android:layout_height="wrap_content"  
-	    android:padding="0dip"  
-	    android:textColor="@color/white"
-	    android:layout_marginTop="0dp"
-	    android:layout_marginBottom="0dp"
-	    android:layout_marginLeft="6dp"
-	    android:layout_marginRight="0dp"
-	    android:textSize="10sp"
-		android:ellipsize="end"
-		android:singleLine="true"
-		android:scrollHorizontally="true"
-	    android:gravity="left"/>  
-    
-</LinearLayout>
+        android:id="@+id/lineTop"
+        android:background="@drawable/popupyellow"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:visibility="gone"
+        android:text=""
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineLL"
+        android:orientation="horizontal"
+        android:padding="2dip">
+
+        <TextView
+            android:id="@+id/markFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/markNewDish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/markHealthy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/markDrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/markCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/files_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dip"
+            android:textColor="@color/white"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="0dp"
+            android:textSize="10sp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:gravity="left" />
+
+    </LinearLayout>
 
 </LinearLayout> 

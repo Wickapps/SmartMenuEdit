@@ -7,22 +7,22 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center"
     android:gravity="center">
+
     <ImageView
         android:id="@+id/ic_Launcher"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:src="@drawable/ic_launcher"
         android:layout_gravity="center"
-        android:padding="10dp">
-    </ImageView>
+        android:padding="10dp"></ImageView>
 
-	<ProgressBar
-    	android:id="@android:id/progress"
-    	style="?android:attr/progressBarStyle"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_gravity="center"	
-    	android:layout_centerHorizontal="true"/>
+    <ProgressBar
+        android:id="@android:id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/text"
@@ -34,6 +34,6 @@
         android:layout_gravity="center"
         android:padding="10dip"
         android:typeface="sans"
-        android:textColor="@color/black444"/>
+        android:textColor="@color/black444" />
 
 </LinearLayout>

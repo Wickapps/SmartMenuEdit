@@ -1,1250 +1,1291 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/editorlayout"
+    android:id="@+id/editorlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainbox"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-		android:background="@color/black"
-        android:baselineAligned="false"
-        android:orientation="vertical">	
-   
-<LinearLayout
-	    android:id="@+id/mainbox"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:layout_marginBottom="0dip"
-	    android:layout_marginLeft="0dip"
-	    android:layout_marginRight="0dip"
-	    android:layout_marginTop="0dip"
-	    android:orientation="horizontal"
-	    android:visibility="visible">		    
-		   
-	<LinearLayout
-	    android:id="@+id/col2"
-	    android:layout_width="240dip"
-	    android:layout_height="fill_parent"
-	    android:layout_marginBottom="0dip"
-	    android:layout_marginLeft="5px"
-	    android:layout_marginRight="5px"
-	    android:layout_marginTop="10dip"
-	    android:orientation="vertical"
-	    android:visibility="visible">  
-		    		     
-	<ListView
-		android:id="@+id/listB"
-		android:layout_width="240dip"
-		android:layout_height="fill_parent"
-		android:typeface="sans"
-	    android:textColor="@color/white"/>
-	
-	</LinearLayout>
-	
-	<LinearLayout
-	    android:id="@+id/col3"
-	    android:layout_width="0dip"
-	    android:layout_height="fill_parent"
-	    android:layout_weight="1"
-	    android:layout_marginBottom="0dip"
-	    android:layout_marginLeft="10px"
-	    android:layout_marginRight="10px"
-	    android:layout_marginTop="0dip"
-	    android:orientation="vertical"
-	    android:visibility="visible">
-		
-	<ViewFlipper android:id="@+id/details"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-		android:gravity="center">  
-        	
-    <LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_marginTop="0dip"
-			android:layout_marginBottom="0dip">
-			
-		<ScrollView
-	    	android:id="@+id/sv31"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent">      	    
-		<LinearLayout
-			android:id="@+id/LinearLayout31" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">
-			    
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtDishEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Dish Name (English)"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="35"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etDishEng" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtDishCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Dish Name (Chinese)"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31m2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center"
-			>        
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="35"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etDishCh" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>			
-		</LinearLayout>			
-		
-		<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="6dip"		
-    		android:orientation="horizontal" >
-    	<TextView
-        	android:id="@+id/txtUnavail"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="Dish Unavailable"
-			android:textSize="13sp"
-			>
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkUnavail"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false"
-        	>
-    	</CheckBox>    
-		</LinearLayout> 
-		
-		<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="2dip"		
-    		android:orientation="horizontal">
-    	<TextView
-        	android:id="@+id/blockFavorite"
-        	android:layout_width="wrap_content"
-        	android:gravity="center"
-        	android:layout_height="wrap_content"
-			android:textSize="18sp">
-    	</TextView>
-    	<TextView
-        	android:id="@+id/txtFavorite"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_marginLeft="8dip"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="Popular"
-			android:textSize="13sp">
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkFavorite"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false">
-    	</CheckBox>
-    	</LinearLayout>    
+        android:layout_marginBottom="0dip"
+        android:layout_marginLeft="0dip"
+        android:layout_marginRight="0dip"
+        android:layout_marginTop="0dip"
+        android:orientation="horizontal"
+        android:visibility="visible">
 
-		<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="2dip"		
-    		android:orientation="horizontal">
-    	<TextView
-        	android:id="@+id/blockNewDish"
-        	android:layout_width="wrap_content"
-        	android:gravity="center"
-        	android:layout_height="wrap_content"
-			android:textSize="18sp">
-    	</TextView>
-    	<TextView
-        	android:id="@+id/txtNewDish"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_marginLeft="8dip"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="New Dish"
-			android:textSize="13sp">
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkNewDish"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false">
-    	</CheckBox>
-    	</LinearLayout>
-    	
-    	<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="2dip"		
-    		android:orientation="horizontal">
-    	<TextView
-        	android:id="@+id/blockHealthy"
-        	android:layout_width="wrap_content"
-        	android:gravity="center"
-        	android:layout_height="wrap_content"
-			android:textSize="18sp">
-    	</TextView>
-    	<TextView
-        	android:id="@+id/txtHealthy"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_marginLeft="8dip"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="Healthy"
-			android:textSize="13sp">
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkHealthy"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false">
-    	</CheckBox>  
-		</LinearLayout>
-		
-    	<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="2dip"		
-    		android:orientation="horizontal">
-    	<TextView
-        	android:id="@+id/blockDrink"
-        	android:layout_width="wrap_content"
-        	android:gravity="center"
-        	android:layout_height="wrap_content"
-			android:textSize="18sp">
-    	</TextView>
-    	<TextView
-        	android:id="@+id/txtDrink"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_marginLeft="8dip"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="Drink"
-			android:textSize="13sp">
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkDrink"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false">
-    	</CheckBox>  
-		</LinearLayout>
-		
-    	<LinearLayout
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:layout_gravity="center"
-    		android:gravity="center" 
-    		android:paddingTop="2dip"		
-    		android:orientation="horizontal">
-    	<TextView
-        	android:id="@+id/blockCounter"
-        	android:layout_width="wrap_content"
-        	android:gravity="center"
-        	android:layout_height="wrap_content"
-			android:textSize="18sp">
-    	</TextView>
-    	<TextView
-        	android:id="@+id/txtCounter"
-        	android:layout_width="wrap_content"
-        	android:gravity="right"
-        	android:layout_marginLeft="8dip"
-        	android:layout_height="wrap_content"
-			android:textColor="@color/white"	
-        	android:text="Counter Only"
-			android:textSize="13sp">
-    	</TextView>
-    	<CheckBox
-        	android:id="@+id/checkCounter"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
- 			android:checked="false">
-    	</CheckBox>  
-		</LinearLayout> 			
-		
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtCat"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Category"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31s1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-        
-		<Button 
-			android:id="@+id/spinnerCat" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"		
-			android:minWidth="300dip"
-			android:text=""
-			android:drawableRight="@drawable/arrow_down"
-			android:visibility="visible"
-			android:textStyle="normal"
-			android:paddingLeft="10.0dip"
-			android:paddingRight="10.0dip"
-			android:textSize="14sp"
-			android:singleLine="true"
-			android:enabled="true"
-			android:layout_gravity="center_horizontal"
-			></Button>
-		</LinearLayout>
-			
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtPic"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Picture"  
-			android:gravity="center_horizontal"></TextView>
-
-		<LinearLayout
-			android:id="@+id/LL31s2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="vertical" 
-			android:layout_gravity="center">
-		<Button 
-			android:id="@+id/spinnerPic" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"		
-			android:minWidth="300dip"
-			android:text=""
-			android:drawableRight="@drawable/arrow_down"
-			android:visibility="visible"
-			android:textStyle="normal"
-			android:paddingLeft="10.0dip"
-			android:paddingRight="10.0dip"
-			android:textSize="14sp"
-			android:singleLine="true"
-			android:enabled="true"
-			android:layout_gravity="center_horizontal"
-			></Button>
-		<ImageView
-        	android:id="@+id/ll31img"
-        	android:layout_width="70dip"
-        	android:layout_height="100dip"
-        	android:padding="2.0dip"
-			android:clickable="true"
-			android:focusable = "false"
-        	android:background="@drawable/gallery_shape"
-        	android:scaleType="fitCenter"
-        	android:layout_gravity="center" 
-        	android:gravity="center"
-        	/>	
-		<Button
-        	android:id="@+id/ll31camimg"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:paddingRight="20dp"
-        	android:layout_marginTop="10dip"
-			android:text="Picture"
-			android:textSize="13sp"
-        	android:drawableLeft="@drawable/ic_menu_camera"
-        	android:layout_gravity="center" 
-        	android:gravity="center"
-        	/>	        		
-		</LinearLayout>
-
-		<LinearLayout
-			android:id="@+id/LL31m3" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">   
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtDescEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Description (English)"  
-			android:gravity="center_horizontal"></TextView>	
-		</LinearLayout>	        
-     
-		<EditText 
-		    android:id="@+id/etDescEng" 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:layout_margin="5dip"
-			android:scrollHorizontally="false"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-
-		<LinearLayout
-			android:id="@+id/LL31m4" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">     		
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtDescCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Description (Chinese)"  
-			android:gravity="center_horizontal"></TextView>		
-		</LinearLayout>	        
-   
-		<EditText 
-		    android:id="@+id/etDescCh" 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:layout_margin="5dip"
-			android:scrollHorizontally="false"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>
-			
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtPriceEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Price Options (English)"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31m5" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">        
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etPriceEng" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtPriceCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Price Options (Chinese)"  
-			android:gravity="center_horizontal"></TextView>
         <LinearLayout
-			android:id="@+id/LL31m6" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etPriceCh" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtPrice"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Indicate Price"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL31m7" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etPrice" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtOptions"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Options"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31b1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<Button 
-			android:id="@+id/butOptions" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"		
-			android:minWidth="300dip"
-			android:text=""
-			android:drawableRight="@drawable/arrow_down"
-			android:visibility="visible"
-			android:textStyle="normal"
-			android:paddingLeft="10.0dip"
-			android:paddingRight="10.0dip"
-			android:textSize="14sp"
-			android:singleLine="true"
-			android:enabled="true"
-			android:layout_gravity="center_horizontal"
-			></Button>
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtExtras"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Extras"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL31b2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<Button 
-			android:id="@+id/butExtras" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:minWidth="300dip"
-			android:text=""
-			android:drawableRight="@drawable/arrow_down"
-			android:visibility="visible"
-			android:textStyle="normal"
-			android:paddingLeft="10.0dip"
-			android:paddingRight="10.0dip"
-			android:textSize="14sp"
-			android:singleLine="true"
-			android:enabled="true"
-			android:layout_gravity="center_horizontal"
-			></Button> 
-		</LinearLayout>        			    
-		</LinearLayout> 
-		</ScrollView>   	    
-	</LinearLayout>	
-    <LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_marginTop="2dip"
-			android:layout_marginBottom="8dip">
+            android:id="@+id/col2"
+            android:layout_width="240dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="0dip"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="5px"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-		<ScrollView
-	    	android:id="@+id/sv32"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent">         
-        		
-		<LinearLayout
-			android:id="@+id/LinearLayout32" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">"
+            <ListView
+                android:id="@+id/listB"
+                android:layout_width="240dip"
+                android:layout_height="fill_parent"
+                android:typeface="sans"
+                android:textColor="@color/white" />
 
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtCatName"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Category Name"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL32m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etCatName" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtCatEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="English Display Name"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL32m2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etEngName" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>
-		</LinearLayout>
-		<TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtCatCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Display Chinese Name"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL32m3" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etChName" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-		
-		</LinearLayout>		
-		</ScrollView>	
+        </LinearLayout>
 
-	</LinearLayout>	
-    <LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_marginTop="2dip"
-			android:layout_marginBottom="8dip">
-		
-		<LinearLayout
-			android:id="@+id/LinearLayout33" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/txtKitchenName"
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Original Dish Description"  
-			android:gravity="center_horizontal"></TextView>
         <LinearLayout
-			android:id="@+id/LL33m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-		    android:id="@+id/etKitchenName"
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="50"
-			android:inputType="textNoSuggestions"
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		
-		</LinearLayout>
-        <TextView
-            android:id="@+id/txtKitchenReplace"
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Kitchen Replacement Code"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL33m2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText
-		    android:id="@+id/etKitchenReplace"
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="50"
-			android:inputType="textNoSuggestions"
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-		</LinearLayout>			
-	</LinearLayout>	
+            android:id="@+id/col3"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="0dip"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="0dip"
+            android:orientation="vertical"
+            android:visibility="visible">
 
-	<LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_margin="5dip">
-					
-		<LinearLayout
-			android:id="@+id/LinearLayout35" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">
-        <LinearLayout
-			android:id="@+id/LL51m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">        
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtSettings"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Settings Message"  
-			android:gravity="center_horizontal"></TextView>	
-		</LinearLayout>	        
+            <ViewFlipper
+                android:id="@+id/details"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center">
 
-		<EditText 
-		    android:id="@+id/etSettings" 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="25"  
-			android:minLines="25"
-			android:maxLines="25"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:layout_margin="5dip"
-			android:scrollHorizontally="false"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		
-		</LinearLayout>		
-			
-	</LinearLayout>	
-	<LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_marginTop="2dip"
-			android:layout_marginBottom="8dip"  
-    	    >
-		<ScrollView
-	    	android:id="@+id/sv36"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent">
-		
-		<LinearLayout
-			android:id="@+id/LinearLayout36" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">
-		
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtOptName"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Option Item Name"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL61m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etOptName" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtOptEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Option Item List (English)"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL36m2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etOptEng" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-		</LinearLayout>
-		<TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtOptCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Option Item List (Chinese)"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL36m3" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etOptCh" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>		    	
-		</LinearLayout>    
-		</LinearLayout>
-		</ScrollView>
-	</LinearLayout>	
-	<LinearLayout
-    	    android:layout_width="fill_parent"
-    		android:orientation="vertical" 
-    		android:layout_height="wrap_content"
-    		android:layout_marginTop="2dip"
-			android:layout_marginBottom="8dip"  
-    	    >
-		
-	   	<ScrollView
-	    	android:id="@+id/sv37"
-        	android:layout_width="fill_parent"
-        	android:layout_height="fill_parent">
-		
-		<LinearLayout
-			android:id="@+id/LinearLayout37" 
-			android:layout_height="fill_parent"
-			android:layout_width="fill_parent"
-			android:orientation="vertical" 
-			android:layout_gravity="center_horizontal">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dip"
+                    android:layout_marginBottom="0dip">
 
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtExtName"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Extra Item Name"  
-			android:gravity="center_horizontal"></TextView>
+                    <ScrollView
+                        android:id="@+id/sv31"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout31"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtDishEng"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Dish Name (English)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="35"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etDishEng"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtDishCh"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Dish Name (Chinese)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="35"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etDishCh"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="6dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtUnavail"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="Dish Unavailable"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkUnavail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="2dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/blockFavorite"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/txtFavorite"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_marginLeft="8dip"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="Popular"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkFavorite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="2dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/blockNewDish"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/txtNewDish"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_marginLeft="8dip"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="New Dish"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkNewDish"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="2dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/blockHealthy"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/txtHealthy"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_marginLeft="8dip"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="Healthy"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkHealthy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="2dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/blockDrink"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/txtDrink"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_marginLeft="8dip"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="Drink"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkDrink"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="2dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/blockCounter"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"></TextView>
+
+                                <TextView
+                                    android:id="@+id/txtCounter"
+                                    android:layout_width="wrap_content"
+                                    android:gravity="right"
+                                    android:layout_marginLeft="8dip"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:text="Counter Only"
+                                    android:textSize="13sp"></TextView>
+
+                                <CheckBox
+                                    android:id="@+id/checkCounter"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="false"></CheckBox>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtCat"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Category"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31s1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <Button
+                                    android:id="@+id/spinnerCat"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:minWidth="300dip"
+                                    android:text=""
+                                    android:drawableRight="@drawable/arrow_down"
+                                    android:visibility="visible"
+                                    android:textStyle="normal"
+                                    android:paddingLeft="10.0dip"
+                                    android:paddingRight="10.0dip"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:enabled="true"
+                                    android:layout_gravity="center_horizontal"></Button>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtPic"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Picture"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31s2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+
+                                <Button
+                                    android:id="@+id/spinnerPic"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:minWidth="300dip"
+                                    android:text=""
+                                    android:drawableRight="@drawable/arrow_down"
+                                    android:visibility="visible"
+                                    android:textStyle="normal"
+                                    android:paddingLeft="10.0dip"
+                                    android:paddingRight="10.0dip"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:enabled="true"
+                                    android:layout_gravity="center_horizontal"></Button>
+
+                                <ImageView
+                                    android:id="@+id/ll31img"
+                                    android:layout_width="70dip"
+                                    android:layout_height="100dip"
+                                    android:padding="2.0dip"
+                                    android:clickable="true"
+                                    android:focusable="false"
+                                    android:background="@drawable/gallery_shape"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="center"
+                                    android:gravity="center" />
+
+                                <Button
+                                    android:id="@+id/ll31camimg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingRight="20dp"
+                                    android:layout_marginTop="10dip"
+                                    android:text="Picture"
+                                    android:textSize="13sp"
+                                    android:drawableLeft="@drawable/ic_menu_camera"
+                                    android:layout_gravity="center"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/txtDescEng"
+                                    android:textSize="13sp"
+                                    android:paddingTop="14dip"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center"
+                                    android:text="Description (English)"
+                                    android:gravity="center_horizontal"></TextView>
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/etDescEng"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:focusable="true"
+                                android:layout_margin="5dip"
+                                android:scrollHorizontally="false"
+                                android:textSize="14sp"
+                                android:textColor="@color/blackCCC"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="top"></EditText>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m4"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/txtDescCh"
+                                    android:textSize="13sp"
+                                    android:paddingTop="14dip"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center"
+                                    android:text="Description (Chinese)"
+                                    android:gravity="center_horizontal"></TextView>
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/etDescCh"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine|textNoSuggestions"
+                                android:focusable="true"
+                                android:layout_margin="5dip"
+                                android:scrollHorizontally="false"
+                                android:textSize="14sp"
+                                android:textColor="@color/blackCCC"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="top"></EditText>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtPriceEng"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Price Options (English)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m5"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etPriceEng"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtPriceCh"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Price Options (Chinese)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m6"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etPriceCh"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtPrice"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Indicate Price"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31m7"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etPrice"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtOptions"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Options"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31b1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <Button
+                                    android:id="@+id/butOptions"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:minWidth="300dip"
+                                    android:text=""
+                                    android:drawableRight="@drawable/arrow_down"
+                                    android:visibility="visible"
+                                    android:textStyle="normal"
+                                    android:paddingLeft="10.0dip"
+                                    android:paddingRight="10.0dip"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:enabled="true"
+                                    android:layout_gravity="center_horizontal"></Button>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtExtras"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Extras"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL31b2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <Button
+                                    android:id="@+id/butExtras"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:minWidth="300dip"
+                                    android:text=""
+                                    android:drawableRight="@drawable/arrow_down"
+                                    android:visibility="visible"
+                                    android:textStyle="normal"
+                                    android:paddingLeft="10.0dip"
+                                    android:paddingRight="10.0dip"
+                                    android:textSize="14sp"
+                                    android:singleLine="true"
+                                    android:enabled="true"
+                                    android:layout_gravity="center_horizontal"></Button>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:layout_marginBottom="8dip">
+
+                    <ScrollView
+                        android:id="@+id/sv32"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout32"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal">"
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtCatName"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Category Name"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL32m1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etCatName"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtCatEng"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="English Display Name"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL32m2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etEngName"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtCatCh"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Display Chinese Name"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL32m3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etChName"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:layout_marginBottom="8dip">
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout33"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/txtKitchenName"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:paddingTop="14dip"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="Original Dish Description"
+                            android:gravity="center_horizontal"></TextView>
+
+                        <LinearLayout
+                            android:id="@+id/LL33m1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:id="@+id/etKitchenName"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:textSize="14sp"
+                                android:textColor="@color/blackCCC"
+                                android:maxLength="50"
+                                android:inputType="textNoSuggestions"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="top"></EditText>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txtKitchenReplace"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:paddingTop="14dip"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:text="Kitchen Replacement Code"
+                            android:gravity="center_horizontal"></TextView>
+
+                        <LinearLayout
+                            android:id="@+id/LL33m2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <EditText
+                                android:id="@+id/etKitchenReplace"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:textSize="14sp"
+                                android:textColor="@color/blackCCC"
+                                android:maxLength="50"
+                                android:inputType="textNoSuggestions"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="top"></EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip">
+
+                    <LinearLayout
+                        android:id="@+id/LinearLayout35"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/LL51m1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtSettings"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Settings Message"
+                                android:gravity="center_horizontal"></TextView>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/etSettings"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="25"
+                            android:minLines="25"
+                            android:maxLines="25"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:focusable="true"
+                            android:layout_margin="5dip"
+                            android:scrollHorizontally="false"
+                            android:textSize="14sp"
+                            android:textColor="@color/blackCCC"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="top"></EditText>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:layout_marginBottom="8dip">
+
+                    <ScrollView
+                        android:id="@+id/sv36"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout36"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtOptName"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Option Item Name"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL61m1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etOptName"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtOptEng"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Option Item List (English)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL36m2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etOptEng"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtOptCh"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Option Item List (Chinese)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL36m3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etOptCh"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:layout_marginBottom="8dip">
+
+                    <ScrollView
+                        android:id="@+id/sv37"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/LinearLayout37"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtExtName"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Extra Item Name"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL71m1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="25"
+                                    android:inputType="textNoSuggestions"
+                                    android:id="@+id/etExtName"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtExtEng"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Extra Item (English Name)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL71m2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etExtEng"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/txtExtCh"
+                                android:textSize="13sp"
+                                android:paddingTop="14dip"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:text="Extra Item (Chinese Name)"
+                                android:gravity="center_horizontal"></TextView>
+
+                            <LinearLayout
+                                android:id="@+id/LL71m3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center">
+
+                                <EditText
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/blackCCC"
+                                    android:maxLength="500"
+                                    android:scrollHorizontally="false"
+                                    android:singleLine="false"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:focusable="true"
+                                    android:id="@+id/etExtCh"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="top"></EditText>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
         <LinearLayout
-			android:id="@+id/LL71m1" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:lines="1" 
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="25"
-			android:inputType="textNoSuggestions"
-			android:id="@+id/etExtName" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>	
-	</LinearLayout>
-        <TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtExtEng"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Extra Item (English Name)"  
-			android:gravity="center_horizontal"></TextView>
-        <LinearLayout
-			android:id="@+id/LL71m2" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">		
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etExtEng" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>			
-		</LinearLayout>
-		<TextView 
-      		android:layout_height="wrap_content" 
-      		android:layout_width="wrap_content"
-			android:id="@+id/txtExtCh"
-			android:textSize="13sp"
-			android:paddingTop="14dip"
-      		android:textColor="@color/white"		
-   			android:layout_gravity="center"		
-			android:text="Extra Item (Chinese Name)"  
-			android:gravity="center_horizontal"></TextView>
-		<LinearLayout
-			android:id="@+id/LL71m3" 
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:orientation="horizontal" 
-			android:layout_gravity="center">		
-		<EditText 
-	      	android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-      		android:textSize="14sp"			
-      		android:textColor="@color/blackCCC"			
-			android:maxLength="500"
-			android:scrollHorizontally="false"
-			android:singleLine="false"
-			android:inputType="textMultiLine|textNoSuggestions"
-			android:focusable="true"
-			android:id="@+id/etExtCh" 
-			android:layout_gravity="center_horizontal"
-			android:gravity="top"></EditText>			
-		
-		</LinearLayout>
-		</LinearLayout>
-		</ScrollView>
-	</LinearLayout>	
-	
-	</ViewFlipper>
-		
-	</LinearLayout>	
-	
-	<LinearLayout 
-        android:id="@+id/col4"
-        android:layout_width="60dip"
-        android:layout_height="fill_parent"
-        android:layout_marginLeft="5dip"
-        android:layout_marginRight="5dip"
-        android:orientation="vertical">	
+            android:id="@+id/col4"
+            android:layout_width="60dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:orientation="vertical">
 
-	<ScrollView
-	    android:id="@+id/sv4"
-        android:layout_width="60dip"
-        android:layout_height="fill_parent">    
-	
-	<LinearLayout
-	    android:id="@+id/col4top"
-	    android:layout_width="60dip"
-	    android:layout_height="fill_parent"
-	    android:orientation="vertical"
-	    android:layout_gravity="center_horizontal"
-	    android:visibility="visible">  
-		
-	
-	    
-	<LinearLayout
-		android:id="@+id/LLCI" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal" 
-		android:layout_marginTop="10dp"
-		android:layout_marginBottom="10dp"
-		android:gravity="center"
-		>  	        		    
-	<TextView 
-	    android:id="@+id/col3header"
-		android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:textSize="12sp"
-		android:typeface="sans"
-		android:lines="2"
-		android:maxLines="2"
-		android:minLines="2"
-		android:minHeight="40dp"
-	    android:textColor="@color/white"
-	    android:textStyle="bold"
-	    android:gravity="center"
-	    android:text="" 
-		></TextView> 	    
+            <ScrollView
+                android:id="@+id/sv4"
+                android:layout_width="60dip"
+                android:layout_height="fill_parent">
 
-	</LinearLayout>	    
-	    
-	    
-	    
-	    
-	<Button 
-		android:id="@+id/butDelete" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Delete"
-		android:visibility="gone"
-		android:layout_gravity="center_horizontal"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:textColor="@color/white"		
-		></Button> 	
-		
-	<Button 
-		android:id="@+id/butNew" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="New"
-		android:visibility="gone"
-		android:layout_gravity="center_horizontal"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:textColor="@color/white"		
-		></Button> 	
-		
-	<Button 
-		android:id="@+id/butSaveNew" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Save"
-		android:visibility="invisible"
-		android:layout_gravity="center_horizontal"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:textColor="@color/white"		
-	></Button> 		
-		
-	<Button 
-		android:id="@+id/butMoveUp" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Up"
-		android:visibility="visible"
-		android:layout_gravity="center_horizontal"
-		android:layout_marginTop="10dip"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:textColor="@color/white"		
-		></Button> 	
-		
-	<Button 
-		android:id="@+id/butMoveDown" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Down"
-		android:visibility="visible"
-		android:layout_gravity="center_horizontal"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:textColor="@color/white"		
-		></Button> 		
-			
-	<Button 
-		android:id="@+id/butUpload" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Upload"
-		android:visibility="invisible"
-		android:layout_marginTop="10dip"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:layout_gravity="center_horizontal"
-		android:textColor="@color/white"		
-		></Button> 		
-		
-	<Button 
-		android:id="@+id/butRestore" 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:text="Restore"
-		android:visibility="invisible"
-		android:layout_marginTop="10dip"
-		android:paddingLeft="5.0dip"
-		android:paddingRight="5.0dip"
-		android:textSize="12sp"
-		android:singleLine="true"
-		android:layout_gravity="center_horizontal"
-		android:textColor="@color/white"		
-		></Button> 		
-	
-	</LinearLayout>	
-	</ScrollView>	
+                <LinearLayout
+                    android:id="@+id/col4top"
+                    android:layout_width="60dip"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible">
 
-	</LinearLayout>
-	
-	</LinearLayout>						
-		    			    
+
+                    <LinearLayout
+                        android:id="@+id/LLCI"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/col3header"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:typeface="sans"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:minHeight="40dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text=""></TextView>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/butDelete"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Delete"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butNew"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="New"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butSaveNew"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Save"
+                        android:visibility="invisible"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butMoveUp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Up"
+                        android:visibility="visible"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dip"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butMoveDown"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Down"
+                        android:visibility="visible"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butUpload"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Upload"
+                        android:visibility="invisible"
+                        android:layout_marginTop="10dip"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white"></Button>
+
+                    <Button
+                        android:id="@+id/butRestore"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Restore"
+                        android:visibility="invisible"
+                        android:layout_marginTop="10dip"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="5.0dip"
+                        android:textSize="12sp"
+                        android:singleLine="true"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white"></Button>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </LinearLayout>

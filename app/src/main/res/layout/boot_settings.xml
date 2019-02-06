@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_height="fill_parent"
-  	android:layout_width="fill_parent"
-  	android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,8 +31,8 @@
                 android:textSize="28dip"
                 android:layout_gravity="center"
                 android:padding="10dip"
-                android:typeface="sans"/>
-    
+                android:typeface="sans" />
+
             <TextView
                 android:id="@+id/textBootIntro"
                 android:layout_width="wrap_content"
@@ -43,14 +42,15 @@
                 android:textSize="15dip"
                 android:layout_gravity="center"
                 android:padding="10dip"
-                android:typeface="sans"/>
-    
+                android:typeface="sans" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/labelServerIPtext"
                     android:layout_width="wrap_content"
@@ -61,6 +61,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="Server"
                     android:textSize="14sp"></TextView>
+
                 <EditText
                     android:id="@+id/serverIP"
                     android:layout_width="wrap_content"
@@ -82,6 +83,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/labelSMIDtext"
                     android:layout_width="wrap_content"
@@ -92,6 +94,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="SmartMenu ID"
                     android:textSize="14sp"></TextView>
+
                 <EditText
                     android:id="@+id/SMID"
                     android:layout_width="wrap_content"
@@ -112,7 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/labelSSL"
                     android:layout_width="wrap_content"
@@ -123,6 +127,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="Use SSL Encryption"
                     android:textSize="14sp"></TextView>
+
                 <CheckBox
                     android:id="@+id/SSLprotocol"
                     android:layout_width="wrap_content"
@@ -137,7 +142,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/labelCheck204"
                     android:layout_width="wrap_content"
@@ -148,6 +154,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="Check Server Available"
                     android:textSize="14sp"></TextView>
+
                 <CheckBox
                     android:id="@+id/Check204"
                     android:layout_width="wrap_content"
@@ -165,7 +172,8 @@
                 android:paddingTop="4dp"
                 android:layout_marginTop="50dip"
                 android:visibility="visible"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/settingSaveText"
                     android:layout_width="wrap_content"
@@ -175,15 +183,14 @@
                     android:text="Save Settings"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
-                    android:textSize="14sp">
-                </TextView>
+                    android:textSize="14sp"></TextView>
+
                 <CheckBox
                     android:id="@+id/checkSave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:checked="false">
-                </CheckBox>
+                    android:checked="false"></CheckBox>
             </LinearLayout>
 
             <Button
