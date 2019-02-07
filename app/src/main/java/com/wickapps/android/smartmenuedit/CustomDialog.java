@@ -1,5 +1,3 @@
-package com.wickapps.android.smartmenuedit;
-
 /*
  * Copyright (C) 2019 Mark Wickham
  *
@@ -14,8 +12,9 @@ package com.wickapps.android.smartmenuedit;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
  */
+
+package com.wickapps.android.smartmenuedit;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -28,20 +27,22 @@ import android.widget.Button;
  * Class Must extends with Dialog
  */
 
-/** Implement onClickListener to dismiss dialog when OK Button is pressed */
+/**
+ * Implement onClickListener to dismiss dialog when OK Button is pressed
+ */
 
 public class CustomDialog extends Dialog implements OnClickListener {
-    Button okButton;
+	Button okButton;
 
-    public CustomDialog(Context context) {
-        super(context);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-    }
+	public CustomDialog(Context context) {
+		super(context);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+	}
 
-    //	@Override
-    public void onClick(View v) {
-        /** When OK Button is clicked, dismiss the dialog */
-        if (v == okButton)
-            dismiss();
-    }
+	//	@Override
+	public void onClick(View v) {
+		/** When OK Button is clicked, dismiss the dialog */
+		if (v == okButton)
+			dismiss();
+	}
 }
