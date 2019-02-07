@@ -20,6 +20,7 @@ android {
             def project = "SmartMenu_Edit"
             def version = variant.versionName
             def ver2 = version.substring(0,1) + version.substring(2,4)
+            // Set the filename
             outputFileName = project + ver2 + ".apk"
         }
     }
