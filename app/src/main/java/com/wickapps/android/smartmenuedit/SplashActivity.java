@@ -56,23 +56,11 @@ import okhttp3.Response;
 
 public class SplashActivity extends Activity {
 
-	int i;
-	Locale lc;
-
 	Boolean downloadFail = false;
-	private CheckBox cb1;
-	private Button b1;
-
 	private ConnectionLog mLog;
-
 	private SharedPreferences prefs;
-
-	Boolean uploadFail = false;
-
 	private EditText etPassword1, etPassword2, etPassword3, etPassword4;
 	GenericTextWatcher watcher1, watcher2, watcher3, watcher4;
-
-	private static String[] filesText = new String[]{"", "", "", "", "", ""};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -96,6 +84,8 @@ public class SplashActivity extends Activity {
 							| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 							| View.INVISIBLE);
 		}
+
+		setContentView(R.layout.splash);
 
 		try {
 			mLog = new ConnectionLog(this);
