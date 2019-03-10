@@ -26,6 +26,7 @@ import android.content.SharedPreferences.Editor;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
@@ -53,7 +54,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends Activity {
+public class SplashActivity extends Activity {
 
 	int i;
 	Locale lc;
@@ -77,15 +78,24 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		getWindow().setFlags(
-				WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		// Setup the ActionBar
-		getActionBar().setDisplayShowTitleEnabled(true);
-		getActionBar().setSubtitle("Edit");
-		getActionBar().setTitle("SmartMenu");
+		//getActionBar().setDisplayShowTitleEnabled(true);
+		//getActionBar().setSubtitle(Global.AppName);
+		//getActionBar().setTitle(Global.CustomerName + " " + Global.StoreID);
+
+		// Set up with no ActionBar
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			getWindow().getDecorView().setSystemUiVisibility(
+					View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+							| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+							| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+							| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+							| View.SYSTEM_UI_FLAG_FULLSCREEN
+							| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+							| View.INVISIBLE);
+		}
 
 		try {
 			mLog = new ConnectionLog(this);
@@ -286,7 +296,7 @@ public class MainActivity extends Activity {
 				failedAuth2();
 			} else {
 				finish();
-				Intent kintent = new Intent(getApplicationContext(), MenuEditor.class);
+				Intent kintent = new Intent(getApplicationContext(), MenuEditorActivity.class);
 				kintent.setFlags((Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP));
 				startActivity(kintent);
 			}
@@ -363,7 +373,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void failedAuth0() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(SplashActivity.this).create();
 		alertDialog.setTitle("Connection");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("No connection. Please restart.");
@@ -377,7 +387,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void failedAuth1() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(SplashActivity.this).create();
 		alertDialog.setTitle("Connection");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("Upload error. Please restart.");
@@ -391,7 +401,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void failedAuth2() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(SplashActivity.this).create();
 		alertDialog.setTitle("Connection");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("Connection error. Please Restart.");

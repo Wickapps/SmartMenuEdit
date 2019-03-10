@@ -97,7 +97,7 @@ import okhttp3.Response;
 
 import static com.squareup.picasso.Picasso.get;
 
-public class MenuEditor extends Activity implements OnNavigationListener {
+public class MenuEditorActivity extends Activity implements OnNavigationListener {
 
 	ListView listLines;
 	SelectedAdapter adapterLines;
@@ -300,7 +300,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						linesM = Global.MENUTXT.split("\\n");
 						clearDetailArea();
 						totItems = linesM.length;
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesM, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesM, curFile);
 						break;
 					case 1:
 						tmp = linesC[pos];
@@ -312,7 +312,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						linesC = Global.CATEGORYTXT.split("\\n");
 						clearDetailArea();
 						totItems = linesC.length;
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesC, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesC, curFile);
 						// Also rebuild the Category list
 						setCatIdList();
 						// Also nned to rebuild the Menu List since category order has changed
@@ -346,7 +346,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						linesM = Global.MENUTXT.split("\\n");
 						clearDetailArea();
 						totItems = linesM.length;
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesM, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesM, curFile);
 						break;
 					case 1:
 						tmp = linesC[pos];
@@ -358,7 +358,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						linesC = Global.CATEGORYTXT.split("\\n");
 						clearDetailArea();
 						totItems = linesC.length;
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesC, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesC, curFile);
 						// Also rebuild the Category list
 						setCatIdList();
 						// Also need to rebuild the Menu List since category order has changed
@@ -422,7 +422,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							clearDetailArea();
 							totItems = newLinesM.length;
 
-							adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, newLinesM, curFile);
+							adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, newLinesM, curFile);
 							listLines.setAdapter(adapterLines);
 							adapterLines.setSelectedPosition(newLoc);
 							listLines.smoothScrollToPosition(newLoc);
@@ -449,7 +449,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							linesC = Global.CATEGORYTXT.split("\\n");
 							clearDetailArea();
 							totItems = newLinesC.length;
-							adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, newLinesC, curFile);
+							adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, newLinesC, curFile);
 							butUpload.setVisibility(View.VISIBLE);
 							butSaveNew.setVisibility(View.INVISIBLE);
 						} else {
@@ -470,7 +470,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							linesK = Global.KITCHENTXT.split("\\n");
 							clearDetailArea();
 							totItems = newLinesK.length;
-							adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, newLinesK, curFile);
+							adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, newLinesK, curFile);
 							butUpload.setVisibility(View.VISIBLE);
 							butSaveNew.setVisibility(View.INVISIBLE);
 						} else {
@@ -478,7 +478,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						}
 						break;
 					case 3:
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesS, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesS, curFile);
 						break;
 					case 4:
 						String[] newLinesO = new String[linesO.length + 1];
@@ -495,7 +495,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							linesO = Global.OPTIONSTXT.split("\\n");
 							clearDetailArea();
 							totItems = newLinesO.length;
-							adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, newLinesO, curFile);
+							adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, newLinesO, curFile);
 							butUpload.setVisibility(View.VISIBLE);
 							butSaveNew.setVisibility(View.INVISIBLE);
 							// refresh the options list
@@ -503,7 +503,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						} else {
 							validationEmpty();
 						}
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesO, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesO, curFile);
 						break;
 					case 5:
 						String[] newLinesE = new String[linesE.length + 1];
@@ -520,7 +520,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							linesE = Global.EXTRASTXT.split("\\n");
 							clearDetailArea();
 							totItems = newLinesE.length;
-							adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, newLinesE, curFile);
+							adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, newLinesE, curFile);
 							butUpload.setVisibility(View.VISIBLE);
 							butSaveNew.setVisibility(View.INVISIBLE);
 							// refresh the extras list
@@ -528,7 +528,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 						} else {
 							validationEmpty();
 						}
-						adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesE, curFile);
+						adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesE, curFile);
 						break;
 				}
 				listLines.setAdapter(adapterLines);
@@ -538,7 +538,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 
 		butDel.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+				AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 				alertDialog.setTitle("Delete Item");
 				alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 				alertDialog.setMessage("The current selected Item will be permanently deleted.");
@@ -555,22 +555,22 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							// So do it with a case
 							switch (curFile) {
 								case 0:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesM, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesM, curFile);
 									break;
 								case 1:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesC, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesC, curFile);
 									break;
 								case 2:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesK, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesK, curFile);
 									break;
 								case 3:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesS, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesS, curFile);
 									break;
 								case 4:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesO, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesO, curFile);
 									break;
 								case 5:
-									adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesE, curFile);
+									adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesE, curFile);
 									break;
 							}
 							listLines.setAdapter(adapterLines);
@@ -581,7 +581,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 							adapterLines.unSelect();
 						} else {
 							// Delete failed
-							Toast.makeText(MenuEditor.this, "Delete Failed", Toast.LENGTH_SHORT).show();
+							Toast.makeText(MenuEditorActivity.this, "Delete Failed", Toast.LENGTH_SHORT).show();
 						}
 						butDel.setVisibility(View.GONE);
 					}
@@ -804,7 +804,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 			pictureTaken = true;
 
 			// pop up a dialog so we can get a name for the new pic (NP) and upload it
-			final Dialog dialogName = new Dialog(MenuEditor.this);
+			final Dialog dialogName = new Dialog(MenuEditorActivity.this);
 			dialogName.setContentView(R.layout.newpic_name);
 			dialogName.setCancelable(true);
 			dialogName.setCanceledOnTouchOutside(true);
@@ -821,10 +821,10 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 			TextView NPtext = (TextView) dialogName.findViewById(R.id.NPtext);
 
 			NPtext.setText(getString(R.string.new_pic_text1));
-			NPtext.setTextSize(Utils.getFontSize(MenuEditor.this));
+			NPtext.setTextSize(Utils.getFontSize(MenuEditorActivity.this));
 			// edit text box is next
 			Button NPcancel = (Button) dialogName.findViewById(R.id.NPcancel);
-			NPcancel.setTextSize(Utils.getFontSize(MenuEditor.this));
+			NPcancel.setTextSize(Utils.getFontSize(MenuEditorActivity.this));
 			NPcancel.setText(getString(R.string.cancel));
 			NPcancel.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
@@ -832,7 +832,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				}
 			});
 			Button NPsave = (Button) dialogName.findViewById(R.id.NPadd);
-			NPsave.setTextSize(Utils.getFontSize(MenuEditor.this));
+			NPsave.setTextSize(Utils.getFontSize(MenuEditorActivity.this));
 			NPsave.setText(getString(R.string.save));
 			NPsave.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
@@ -954,7 +954,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 
 	public void filesUpload() {
 		// download the file list for the server spinner
-		final ProgressDialog pd = ProgressDialog.show(MenuEditor.this, "Uploading", "Uploading files to the server...", true, false);
+		final ProgressDialog pd = ProgressDialog.show(MenuEditorActivity.this, "Uploading", "Uploading files to the server...", true, false);
 		new Thread(new Runnable() {
 			public void run() {
 				try {
@@ -1029,7 +1029,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 
 		switch (whichFile) {
 			case 0:
-				//Toast.makeText(MenuEditor.this, "file=menu", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(MenuEditorActivity.this, "file=menu", Toast.LENGTH_SHORT).show();
 				filesModified[0] = true;
 				linesM[curItem - 1] = decode1();        //call the decode to build a new string from the UI widgets
 				Global.MENUTXT = saveArray2File(linesM);
@@ -1395,7 +1395,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 		private int type;
 		private String[] categoryAll;
 
-		public SelectedAdapter(MenuEditor menuEditor, int textViewResourceId, String[] d, int t) {
+		public SelectedAdapter(MenuEditorActivity menuEditorActivity, int textViewResourceId, String[] d, int t) {
 			super();
 			this.items = d;
 			items = d;
@@ -1499,7 +1499,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 			TextView tt = (TextView) v.findViewById(R.id.files_item_title);
 			if (tt != null) {
 				tt.setText(o);
-				tt.setTextSize(Utils.getFontSize(MenuEditor.this) - 2);
+				tt.setTextSize(Utils.getFontSize(MenuEditorActivity.this) - 2);
 				tt.setPadding(2, 2, 2, 2);
 				tt.setSingleLine();
 			}
@@ -1730,7 +1730,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 
 					butUpload.setVisibility(View.VISIBLE);
 
-					adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesM, curFile);
+					adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesM, curFile);
 					listLines.setAdapter(adapterLines);
 					adapterLines.setSelectedPosition(newLoc);
 					listLines.smoothScrollToPosition(newLoc);
@@ -1847,7 +1847,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 					len = linesC.length;
 					// see if this Cat is in use, if so, it cant be deleted
 					if (catIsActive(linesC[pos - 1])) {
-						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 						alertDialog.setTitle("Cannot Delete Category");
 						alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 						alertDialog.setMessage("This Category is not empty. Please delete its Dishes first.");
@@ -1896,7 +1896,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 					len = linesO.length;
 					// see if this Opt is in use, if so, it cant be deleted
 					if (optInUse(linesO[pos - 1])) {
-						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 						alertDialog.setTitle("Cannot Delete Option");
 						alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 						alertDialog.setMessage("This Option is used in the menu. Please update its Dishes first.");
@@ -1928,7 +1928,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 					len = linesE.length;
 					// see if this Ext is in use, if so, it cant be deleted
 					if (extInUse(linesE[pos - 1])) {
-						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+						AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 						alertDialog.setTitle("Cannot Delete Extra");
 						alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 						alertDialog.setMessage("This Extra is used in the menu. Please update its Dishes first.");
@@ -1972,7 +1972,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 
 			case 0:
 				len = linesM.length;
-				//Toast.makeText(MenuEditor.this, "add=0, pos=" + pos + " len=" + len, Toast.LENGTH_SHORT).show();
+				//Toast.makeText(MenuEditorActivity.this, "add=0, pos=" + pos + " len=" + len, Toast.LENGTH_SHORT).show();
 
 				et11 = (EditText) findViewById(R.id.etDishEng);
 				et11.setText("");
@@ -2306,7 +2306,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 	}
 
 	private void validationEmpty() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 		alertDialog.setTitle("Cannot Save New Item");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("One ore more of your entries is empty. Please fill in all entries.");
@@ -2319,7 +2319,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 	}
 
 	private void failedAuth0() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 		alertDialog.setTitle("Connection");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("Data connection not available. Please try again.");
@@ -2332,7 +2332,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 	}
 
 	private void failedAuth1() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 		alertDialog.setTitle("Files Not Uploaded");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("Your changes have not been uploaded. If you exit, changes will be lost.");
@@ -2350,7 +2350,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 	}
 
 	private void failedAuth2() {
-		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditor.this).create();
+		AlertDialog alertDialog = new AlertDialog.Builder(MenuEditorActivity.this).create();
 		alertDialog.setTitle("Uploading");
 		alertDialog.setIcon(android.R.drawable.stat_sys_warning);
 		alertDialog.setMessage("Uploading not successful. Please try again.");
@@ -2382,13 +2382,13 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 		listLines = (ListView) findViewById(R.id.listB);
 		switch (itemPosition) {
 			case 0:
-				//Toast.makeText(MenuEditor.this, "YES=" + itemPosition, Toast.LENGTH_SHORT).show();
+				//Toast.makeText(MenuEditorActivity.this, "YES=" + itemPosition, Toast.LENGTH_SHORT).show();
 				// they clicked a file so give them the ADD NEW option
 				butNew.setVisibility(View.VISIBLE);
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesM, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesM, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2688,7 +2688,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesC, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesC, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2753,7 +2753,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesK, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesK, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2805,7 +2805,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesS, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesS, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2847,7 +2847,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesO, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesO, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2916,7 +2916,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 				butSaveNew.setVisibility(View.INVISIBLE);
 				butDel.setVisibility(View.GONE);
 
-				adapterLines = new SelectedAdapter(MenuEditor.this, R.layout.lines_item, linesE, curFile);
+				adapterLines = new SelectedAdapter(MenuEditorActivity.this, R.layout.lines_item, linesE, curFile);
 				listLines.setAdapter(adapterLines);
 				listLines.setVisibility(View.VISIBLE);
 
@@ -2997,7 +2997,7 @@ public class MenuEditor extends Activity implements OnNavigationListener {
 					int pos = (curItem - 1) - first;
 					butMoveDown.setVisibility(View.INVISIBLE);
 					butMoveUp.setVisibility(View.INVISIBLE);
-					//Toast.makeText(MenuEditor.this, " cat=" + cat +
+					//Toast.makeText(MenuEditorActivity.this, " cat=" + cat +
 					//		                        " last=" + last +
 					//		                        " first=" + first +
 					//		                        " pos=" + pos, Toast.LENGTH_SHORT).show();
