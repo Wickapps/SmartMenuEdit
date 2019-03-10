@@ -68,25 +68,6 @@ public class SplashActivity extends Activity {
 
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-		// Setup the ActionBar
-		//getActionBar().setDisplayShowTitleEnabled(true);
-		//getActionBar().setSubtitle(Global.AppName);
-		//getActionBar().setTitle(Global.CustomerName + " " + Global.StoreID);
-
-		// Set up with no ActionBar
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-			getWindow().getDecorView().setSystemUiVisibility(
-					View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-							| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-							| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-							| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-							| View.SYSTEM_UI_FLAG_FULLSCREEN
-							| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-							| View.INVISIBLE);
-		}
-
-		setContentView(R.layout.splash);
-
 		try {
 			mLog = new ConnectionLog(this);
 		} catch (Exception e) {
@@ -112,6 +93,18 @@ public class SplashActivity extends Activity {
 	private void stage2() {
 		// Now we are ready to load after asking them for the password and menu choice
 		this.setContentView(R.layout.enterpassword);
+
+		// Set up with no ActionBar
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			getWindow().getDecorView().setSystemUiVisibility(
+					View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+							| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+							| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+							| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+							| View.SYSTEM_UI_FLAG_FULLSCREEN
+							| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+							| View.INVISIBLE);
+		}
 
 		etPassword1 = (EditText) findViewById(R.id.etPassword1);
 		etPassword1.setRawInputType(Configuration.KEYBOARD_12KEY);
@@ -436,6 +429,17 @@ public class SplashActivity extends Activity {
 						imm.toggleSoftInput(0, InputMethodManager.HIDE_IMPLICIT_ONLY);
 					}
 					setContentView(R.layout.splash);
+					// Set up with no ActionBar
+					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+						getWindow().getDecorView().setSystemUiVisibility(
+								View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+										| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+										| View.SYSTEM_UI_FLAG_FULLSCREEN
+										| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+										| View.INVISIBLE);
+					}
 					// always read from server
 					if (checkInternetConnection()) {
 						new HttpsDownload().execute();

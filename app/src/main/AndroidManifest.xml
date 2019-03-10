@@ -28,7 +28,6 @@
         android:largeHeap="true">
         <activity
             android:name="SplashActivity"
-            android:uiOptions="splitActionBarWhenNarrow"
             android:windowSoftInputMode="stateHidden"
             android:launchMode="singleTop">
             <intent-filter>
